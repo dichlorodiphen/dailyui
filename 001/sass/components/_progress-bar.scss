@@ -1,0 +1,58 @@
+.progress-bar {
+    margin: 0 6.5rem;
+    font-size: 1.4rem;
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: [circle1-start] 2rem [circle1-end] 1fr [circle2-start] 2rem [circle2-end] 1fr [circle3-start] 2rem [circle3-end];
+    row-gap: 0.5rem;
+    justify-content: center;
+    justify-items: stretch;
+    align-items: center;
+
+    &__line {
+        height: 2px;
+        margin: 0 -0.5rem;
+        z-index: 1;
+        background-color: $color-grey-light-1;
+
+        &--active {
+            background-image: linear-gradient(
+                to right,
+                $color-primary,
+                $color-grey-light-1
+            );
+        }
+    }
+
+    &__circle {
+        height: 1.8rem;
+        width: 1.8rem;
+        background-color: $color-grey-light-1;
+        border-radius: 50%;
+        z-index: 2;
+
+        &--active {
+            background-color: $color-primary;
+        }
+    }
+
+    &__text {
+        justify-self: center;
+
+        &--1 {
+            grid-row: 2 / 3;
+            grid-column: circle1-start / circle1-end;
+        }
+
+        &--2 {
+            grid-row: 2 / 3;
+            grid-column: circle2-start / circle2-end;
+        }
+
+        &--3 {
+            grid-row: 2 / 3;
+            grid-column: circle3-start / circle3-end;
+        }
+    }
+}

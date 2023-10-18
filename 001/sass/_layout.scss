@@ -5,9 +5,13 @@ body {
 
 .content {
     // Spacing
-    width: 50rem;
+    width: 60rem;
     margin: 0 auto;
     padding: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 
     // Styling
     background-color: $color-white;
@@ -19,4 +23,3 @@ body {
     margin-top: auto;
     padding: 2.5rem 0;
 }
-
