@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    
+
     &__heading {
         text-align: center;
         font-size: 2.4rem;
@@ -12,5 +12,32 @@
         display: flex;
         flex-direction: column;
         gap: 0.8rem;
+    }
+
+    &__label {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+    &__input {
+        // Inherit font attributes.
+        font-size: 1.4rem;
+        font-family: inherit;
+        color: inherit;
+
+        outline: none;
+        padding: 1.2rem 1.6rem;
+        border-radius: 8px;
+
+        border: 2px solid $color-grey-light-1;
+        transition: border 0.2s;
+
+        &:focus {
+            border: 2px solid $color-primary;
+        }
+
+        &::placeholder {
+            font-size: 1.4rem;
+        }
     }
 }
